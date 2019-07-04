@@ -1,0 +1,41 @@
+# 测试环境数据源
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    # 连接URL
+    url: jdbc:h2:file:e:/wechat/data
+    # 用户名
+    username: sa
+    # 密码
+    password: sa
+    # 数据源驱动 hikari
+    type: com.zaxxer.hikari.HikariDataSource
+  jpa:
+    # 显示SQL
+    show-sql: true
+    # 生成 DDL 语句
+    generate-ddl: true
+    # 绑定当前线程 影响到有 `proxy result` 懒加载
+    open-in-view: true
+    hibernate:
+      # 更新数据库表机制 如果发现不一致 update
+      ddl-auto: update
+    properties:
+      hibernate:
+        # 格式化SQL语句显示
+        format_sql: true
+  jackson:
+    # 时间序列化时候格式
+    date-format: yyyy-MM-dd HH:mm:ss
+    # 时区
+    time-zone: GMT+8
+  aop:
+    # cglib proxy
+    proxy-target-class: true
+  # 彩色日志
+  output:
+    ansi:
+      enabled: DETECT
+server:
+  # 启动端口号 可通过外部化配置  java -jar xxx.jar --server.port=80 > xxx.log &
+  port: 6666
