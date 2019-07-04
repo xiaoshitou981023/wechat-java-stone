@@ -8,10 +8,11 @@
         <version>2.1.6.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+
     <groupId>cn.run.java</groupId>
     <artifactId>wechat-java-stone</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>wechat-java-stone</name>
+    <name>weChat-java-stone</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>

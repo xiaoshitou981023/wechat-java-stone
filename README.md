@@ -1,2 +1,2 @@
 # wechat-java-stone
-my wechat 
+微信机器人  开发阶段...
