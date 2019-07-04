@@ -49,6 +49,7 @@ public class TextMessageHandler implements MessageHandler {
     public void groupMessageHandler(@Nonnull WeChatClient client, @Nonnull WXMessage message) {
         WXGroup wxGroup = client.userGroups().get(message.fromGroup.id);
         log.info("当前微信群 名称:{},人数:{},", wxGroup.nameQP, wxGroup.members.size());
+        // 如果有多个 需要改改  总而言之就是   wxGroup.nameQP == 群名称 即可
         if (wxGroup.nameQP.equalsIgnoreCase("hello")) {
             int i = message.content.indexOf(":");
             if (i > 0) {
